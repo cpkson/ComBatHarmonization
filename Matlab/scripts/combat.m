@@ -9,7 +9,7 @@ function bayesdata = combat(dat, batch, mod)
 	fprintf('[combat] Found %d batches\n', n_batch);
 
 	batches = cell(0);
-	for i=1:n_batch
+	for i=1:n_batch-1
 		batches{i}=find(batch == levels(i));
 	end
 	n_batches = cellfun(@length,batches);
